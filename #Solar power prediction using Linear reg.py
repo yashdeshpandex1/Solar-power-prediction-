@@ -1,5 +1,6 @@
 ## Solar power prediction using Linear regression model
 #importing necessary libraries 
+import streamlit as st
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -84,3 +85,7 @@ print(f"Mean Absolute Error on Test Set: {mae}")
 y_pred_train = model.predict(X_train_scaled)
 mae_train = mean_absolute_error(y_train, y_pred_train)
 print(f"Mean Absolute Error on Train Set: {mae_train}")
+
+
+def main():
+    st.title("Solar Power output prediction")
